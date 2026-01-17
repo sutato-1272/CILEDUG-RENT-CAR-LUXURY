@@ -100,16 +100,12 @@
                     },
                     animation: {
                         'glow': 'glow 3s ease-in-out infinite alternate',
-                        'border-spin': 'border-spin 4s linear infinite',
+                        'spin-slow': 'spin 3s linear infinite',
                     },
                     keyframes: {
                         glow: {
                             '0%': { boxShadow: '0 0 10px rgba(99, 102, 241, 0.3)' },
                             '100%': { boxShadow: '0 0 30px rgba(168, 85, 247, 0.6)' },
-                        },
-                        'border-spin': {
-                            '0%': { transform: 'rotate(0deg)' },
-                            '100%': { transform: 'rotate(360deg)' },
                         }
                     }
                 }
@@ -139,37 +135,48 @@
             box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.3);
         }
         
-        /* MULTI-COLOR ANIMATED BORDER BUTTON */
+        /* FIX: MULTI-COLOR ANIMATED BORDER BUTTON */
         .btn-aura {
             position: relative;
-            background: #000;
-            border-radius: 9999px;
-            z-index: 1;
+            background: transparent;
+            z-index: 0;
             overflow: hidden;
             display: inline-flex;
             align-items: center;
             justify-content: center;
+            border-radius: 9999px;
+            padding: 2px; /* Border thickness */
         }
+        
         .btn-aura::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
             width: 200%;
             height: 200%;
-            background: conic-gradient(transparent, #6366f1, #a855f7, #ec4899, transparent 30%);
-            animation: border-spin 3s linear infinite;
-            z-index: -2;
+            background: conic-gradient(
+                #ff4545, #00ff99, #006aff, #ff0095, #ff4545
+            );
+            animation: border-spin 4s linear infinite;
+            z-index: -1;
+            top: -50%;
+            left: -50%;
         }
-        .btn-aura::after {
-            content: '';
-            position: absolute;
-            inset: 2px;
+
+        .btn-aura-inner {
             background: #000;
             border-radius: 9999px;
-            z-index: -1;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
         }
-        .btn-aura:hover::before { animation-duration: 1.5s; }
+
+        @keyframes border-spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
         
         /* Accordion Hantu */
         details > summary { list-style: none; }
@@ -199,10 +206,12 @@
                 </div>
             </div>
             
-            <a href="https://wa.me/6285591636942?text=Halo%20Admin,%20saya%20mau%20sewa%20mobil%20mewah." class="btn-aura px-6 py-2 group">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 font-bold text-sm tracking-wide group-hover:text-white transition-colors relative z-10 flex items-center gap-2">
-                    <i class="fa-brands fa-whatsapp"></i> BOOKING VIP
-                </span>
+            <a href="https://wa.me/6285591636942?text=Halo%20Admin,%20saya%20mau%20sewa%20mobil%20mewah." class="btn-aura group">
+                <div class="btn-aura-inner px-6 py-2">
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 font-bold text-sm tracking-wide group-hover:text-white transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp"></i> BOOKING VIP
+                    </span>
+                </div>
             </a>
         </div>
     </nav>
@@ -222,20 +231,22 @@
                 AVAILABLE 24 JAM DI TANGERANG & BANTEN
             </div>
             
-            <h1 class="font-display text-5xl md:text-8xl font-bold leading-tight mb-8">
+            <h1 class="font-display text-4xl sm:text-6xl md:text-8xl font-bold leading-tight mb-8">
                 DRIVE THE <br> <span class="text-gradient">EXTRAORDINARY.</span>
             </h1>
             
-            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p class="text-gray-400 text-base md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
                 Jasa Sewa Mobil Mewah No.1 di Ciledug & BSD. 
-                Hadirkan kesan prestisius untuk perjalanan bisnis, pernikahan, atau tamu VVIP Anda. Unit terbaru, bersih, dan wangi.
+                Hadirkan kesan prestisius untuk perjalanan bisnis, pernikahan, atau tamu VVIP Anda.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <a href="#fleet" class="btn-aura px-10 py-4 group">
-                    <span class="text-white font-bold tracking-widest relative z-10 flex items-center gap-2">
-                        LIHAT UNIT <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </span>
+                <a href="#fleet" class="btn-aura group">
+                    <div class="btn-aura-inner px-10 py-4 bg-black">
+                        <span class="text-white font-bold tracking-widest flex items-center gap-2">
+                            LIHAT UNIT <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </span>
+                    </div>
                 </a>
             </div>
         </div>
@@ -263,7 +274,7 @@
                             <span><i class="fa-solid fa-suitcase"></i> 4 BAGS</span>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1621213328577-626a454dce4c?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Alphard Tangerang">
+                    <img src="https://images.unsplash.com/photo-1628863688176-5883d65016c9?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Alphard Tangerang">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
 
@@ -289,7 +300,7 @@
                             <span><i class="fa-solid fa-flag"></i> STATE</span>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1563720360172-6728c75cd7e4?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Mobil Pengantin Tangerang">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Mobil Pengantin Tangerang">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
 
