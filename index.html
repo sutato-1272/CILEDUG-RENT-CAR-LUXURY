@@ -42,15 +42,7 @@
           "addressRegion": "Banten",
           "addressCountry": "ID"
         },
-        "priceRange": "$$$",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-          ],
-          "opens": "00:00",
-          "closes": "23:59"
-        }
+        "priceRange": "$$$"
       },
       {
         "@context": "https://schema.org",
@@ -67,7 +59,7 @@
           "name": "Apakah bisa lepas kunci?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Kami melayani sewa lepas kunci untuk korporasi/perusahaan dengan syarat dokumen legalitas yang lengkap. Untuk perorangan, kami sarankan menggunakan driver kami."
+            "text": "Kami melayani sewa lepas kunci untuk korporasi/perusahaan dengan syarat dokumen legalitas yang lengkap."
           }
         }]
       }
@@ -90,9 +82,8 @@
                     colors: {
                         dark: '#050505',
                         panel: '#121212',
-                        neon: '#6366f1', // Indigo Neon
-                        accent: '#a855f7', // Purple Neon
-                        glass: 'rgba(255, 255, 255, 0.05)'
+                        neon: '#6366f1',
+                        accent: '#a855f7',
                     },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
@@ -100,7 +91,6 @@
                     },
                     animation: {
                         'glow': 'glow 3s ease-in-out infinite alternate',
-                        'spin-slow': 'spin 3s linear infinite',
                     },
                     keyframes: {
                         glow: {
@@ -126,16 +116,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .bento-card {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+        .bento-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
         .bento-card:hover {
             transform: translateY(-5px) scale(1.02);
             border-color: rgba(168, 85, 247, 0.5);
             box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.3);
         }
         
-        /* MULTI-COLOR ANIMATED BORDER BUTTON */
+        /* BUTTON AURA */
         .btn-aura {
             position: relative;
             background: transparent;
@@ -147,21 +135,17 @@
             border-radius: 9999px;
             padding: 2px;
         }
-        
         .btn-aura::before {
             content: '';
             position: absolute;
             width: 200%;
             height: 200%;
-            background: conic-gradient(
-                #ff4545, #00ff99, #006aff, #ff0095, #ff4545
-            );
+            background: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);
             animation: border-spin 4s linear infinite;
             z-index: -1;
             top: -50%;
             left: -50%;
         }
-
         .btn-aura-inner {
             background: #000;
             border-radius: 9999px;
@@ -172,13 +156,9 @@
             justify-content: center;
             z-index: 1;
         }
-
-        @keyframes border-spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        @keyframes border-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
         
-        /* Accordion Hantu */
+        /* Accordion */
         details > summary { list-style: none; }
         details > summary::-webkit-details-marker { display: none; }
         
@@ -205,7 +185,6 @@
                     <div class="text-[10px] text-gray-400 tracking-[0.2em] uppercase">Rent Car & Wedding</div>
                 </div>
             </div>
-            
             <a href="https://wa.me/6285591636942?text=Halo%20Admin,%20saya%20mau%20sewa%20mobil%20mewah." class="btn-aura group">
                 <div class="btn-aura-inner px-6 py-2">
                     <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 font-bold text-sm tracking-wide group-hover:text-white transition-colors flex items-center gap-2">
@@ -222,7 +201,6 @@
             <div class="absolute bottom-20 right-10 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] animate-pulse delay-1000"></div>
             <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 grayscale" alt="Luxury Car Rental Tangerang">
         </div>
-        
         <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/80 to-transparent z-10"></div>
 
         <div class="relative z-20 max-w-5xl mx-auto px-6 text-center">
@@ -236,8 +214,7 @@
             </h1>
             
             <p class="text-gray-400 text-base md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-                Jasa Sewa Mobil Mewah No.1 di Ciledug & BSD. 
-                Hadirkan kesan prestisius untuk perjalanan bisnis, pernikahan, atau tamu VVIP Anda.
+                Jasa Sewa Mobil Mewah No.1 di Ciledug & BSD. Hadirkan kesan prestisius untuk perjalanan bisnis, pernikahan, atau tamu VVIP Anda.
             </p>
 
             <div class="flex flex-col sm:flex-row justify-center gap-6">
@@ -262,6 +239,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[400px]">
+                
                 <div class="md:col-span-2 glass-morphism rounded-3xl p-8 relative overflow-hidden bento-card group">
                     <div class="absolute top-0 right-0 p-6 z-20">
                         <span class="px-3 py-1 bg-purple-600 text-white text-xs font-bold rounded-full">BEST SELLER</span>
@@ -274,7 +252,10 @@
                             <span><i class="fa-solid fa-suitcase"></i> 4 BAGS</span>
                         </div>
                     </div>
-                    <img src="https://source.unsplash.com/800x600/?toyota,alphard,luxury,van,black" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Alphard Tangerang">
+                    <img src="https://images.unsplash.com/photo-1621996548758-293674681313?q=80&w=1200&auto=format&fit=crop" 
+                         onerror="this.src='https://placehold.co/1200x800/121212/6366f1?text=PREMIUM+ALPHARD+UNIT&font=montserrat';"
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" 
+                         alt="Sewa Alphard Tangerang">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
 
@@ -284,10 +265,12 @@
                         <p class="text-gray-400 text-sm mb-4">Gagah & Tangguh untuk segala medan.</p>
                         <div class="flex gap-4 text-xs font-mono text-indigo-400">
                             <span><i class="fa-solid fa-bolt"></i> DIESEL</span>
-                            <span><i class="fa-solid fa-dharmachakra"></i> SPORT</span>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Rental Fortuner Ciledug">
+                    <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=800&auto=format&fit=crop" 
+                         onerror="this.src='https://placehold.co/800x800/121212/6366f1?text=FORTUNER+UNIT';"
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" 
+                         alt="Rental Fortuner Ciledug">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
 
@@ -297,10 +280,12 @@
                         <p class="text-gray-400 text-sm mb-4">Sedan VIP untuk Wedding & Tamu Negara.</p>
                         <div class="flex gap-4 text-xs font-mono text-indigo-400">
                             <span><i class="fa-solid fa-star"></i> VIP</span>
-                            <span><i class="fa-solid fa-flag"></i> STATE</span>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Sewa Mobil Pengantin Tangerang">
+                    <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?q=80&w=800&auto=format&fit=crop" 
+                         onerror="this.src='https://placehold.co/800x800/121212/6366f1?text=SEDAN+VIP+UNIT';"
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" 
+                         alt="Sewa Mobil Pengantin Tangerang">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
 
@@ -313,7 +298,10 @@
                             <span><i class="fa-solid fa-chair"></i> 7 SEATS</span>
                         </div>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" alt="Rental Pajero BSD">
+                    <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=800&auto=format&fit=crop" 
+                         onerror="this.src='https://placehold.co/1200x800/121212/6366f1?text=PAJERO+SPORT+UNIT';"
+                         class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition duration-700" 
+                         alt="Rental Pajero BSD">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
                 </div>
             </div>
@@ -322,75 +310,37 @@
 
     <section class="py-24 bg-panel border-y border-white/5 relative overflow-hidden" x-data="rentCalc()">
         <div class="absolute top-0 right-0 w-96 h-96 bg-purple-900/20 rounded-full blur-[100px]"></div>
-
         <div class="max-w-5xl mx-auto px-6 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            
             <div>
                 <span class="text-indigo-500 font-bold tracking-widest text-sm mb-2 block">SMART BOOKING SYSTEM</span>
                 <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">PLAN YOUR <br> <span class="text-gradient">LUXURY TRIP.</span></h2>
-                <p class="text-gray-400 leading-relaxed mb-8">
-                    Cek ketersediaan dan estimasi harga sewa dalam hitungan detik. 
-                    Transparansi harga untuk Alphard, Fortuner, dan Pajero di Ciledug & Tangerang.
-                </p>
-                
+                <p class="text-gray-400 leading-relaxed mb-8">Cek ketersediaan dan estimasi harga sewa dalam hitungan detik. Transparansi harga untuk Alphard, Fortuner, dan Pajero di Ciledug & Tangerang.</p>
                 <ul class="space-y-4">
-                    <li class="flex items-center gap-3 text-sm text-gray-300">
-                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-purple-400"><i class="fa-solid fa-check"></i></span>
-                        Unit Tahun Muda (2023 UP)
-                    </li>
-                    <li class="flex items-center gap-3 text-sm text-gray-300">
-                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-purple-400"><i class="fa-solid fa-check"></i></span>
-                        Driver Wangi, Rapih & Profesional
-                    </li>
-                    <li class="flex items-center gap-3 text-sm text-gray-300">
-                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-purple-400"><i class="fa-solid fa-check"></i></span>
-                        Gratis Dekorasi Pita (Wedding)
-                    </li>
+                    <li class="flex items-center gap-3 text-sm text-gray-300"><span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-purple-400"><i class="fa-solid fa-check"></i></span> Unit Tahun Muda (2023 UP)</li>
+                    <li class="flex items-center gap-3 text-sm text-gray-300"><span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center text-purple-400"><i class="fa-solid fa-check"></i></span> Driver Wangi, Rapih & Profesional</li>
                 </ul>
             </div>
-
             <div class="glass-morphism rounded-2xl p-8 border-t border-purple-500/30 shadow-[0_0_50px_rgba(168,85,247,0.1)]">
                 <h3 class="text-xl font-bold mb-6 font-display">QUICK ESTIMATE</h3>
-                
                 <div class="mb-6">
                     <label class="block text-xs font-bold text-gray-500 tracking-widest mb-2 uppercase">Pilih Armada</label>
                     <div class="grid grid-cols-2 gap-3">
-                        <button @click="car = 'alphard'" :class="car === 'alphard' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition">
-                            <span class="block font-bold">Alphard</span>
-                            <span class="text-xs">VIP Class</span>
-                        </button>
-                        <button @click="car = 'fortuner'" :class="car === 'fortuner' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition">
-                            <span class="block font-bold">Fortuner</span>
-                            <span class="text-xs">SUV Class</span>
-                        </button>
-                        <button @click="car = 'pajero'" :class="car === 'pajero' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition">
-                            <span class="block font-bold">Pajero</span>
-                            <span class="text-xs">SUV Class</span>
-                        </button>
-                        <button @click="car = 'camry'" :class="car === 'camry' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition">
-                            <span class="block font-bold">Camry</span>
-                            <span class="text-xs">Sedan Class</span>
-                        </button>
+                        <button @click="car = 'alphard'" :class="car === 'alphard' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition"><span class="block font-bold">Alphard</span><span class="text-xs">VIP Class</span></button>
+                        <button @click="car = 'fortuner'" :class="car === 'fortuner' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition"><span class="block font-bold">Fortuner</span><span class="text-xs">SUV Class</span></button>
+                        <button @click="car = 'pajero'" :class="car === 'pajero' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition"><span class="block font-bold">Pajero</span><span class="text-xs">SUV Class</span></button>
+                        <button @click="car = 'camry'" :class="car === 'camry' ? 'border-purple-500 bg-purple-500/20 text-white' : 'border-white/10 text-gray-500 hover:bg-white/5'" class="p-3 rounded-lg border text-left transition"><span class="block font-bold">Camry</span><span class="text-xs">Sedan Class</span></button>
                     </div>
                 </div>
-
                 <div class="mb-8">
                     <label class="block text-xs font-bold text-gray-500 tracking-widest mb-2 uppercase">Durasi Sewa</label>
                     <input type="range" min="12" max="24" step="12" x-model="duration" class="w-full accent-purple-500 h-2 bg-gray-800 rounded-lg appearance-none cursor-pointer">
-                    <div class="flex justify-between text-xs text-gray-500 mt-2 font-mono">
-                        <span>12 JAM</span>
-                        <span>FULL DAY (24 JAM)</span>
-                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-2 font-mono"><span>12 JAM</span><span>FULL DAY (24 JAM)</span></div>
                 </div>
-
                 <div class="bg-black/40 rounded-xl p-6 text-center border border-white/5 mb-6">
                     <span class="text-gray-500 text-xs tracking-widest">ESTIMASI HARGA (INCLUDE DRIVER)</span>
                     <div class="text-3xl font-bold text-white font-display mt-1" x-text="formatRupiah(calculate())"></div>
                 </div>
-
-                <a :href="generateWa()" target="_blank" class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white py-4 rounded-xl font-bold text-center transition shadow-lg shadow-purple-900/30">
-                    BOOKING VIA WHATSAPP
-                </a>
+                <a :href="generateWa()" target="_blank" class="block w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white py-4 rounded-xl font-bold text-center transition shadow-lg shadow-purple-900/30">BOOKING VIA WHATSAPP</a>
             </div>
         </div>
     </section>
@@ -398,39 +348,9 @@
     <section class="py-20 bg-dark border-t border-white/5">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-2xl font-bold mb-8 text-center text-gray-600 font-display">FAQ & INFORMATION</h2>
-            
             <div class="space-y-4">
-                <details class="group bg-panel rounded-lg border border-white/5 overflow-hidden">
-                    <summary class="p-6 font-bold text-gray-300 cursor-pointer hover:text-purple-400 transition flex justify-between">
-                        Pusat Rental Mobil Mewah Ciledug & Tangerang Terlengkap
-                        <i class="fa-solid fa-chevron-down text-gray-600 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-500 text-sm leading-relaxed mt-2 border-t border-white/5">
-                        <p class="mb-3">Mencari <strong>rental Alphard Ciledug</strong> atau sewa mobil mewah di Tangerang? Ciledug Rent Car Luxury adalah jawabannya. Kami menyediakan armada premium terlengkap mulai dari Toyota Alphard Transformer, Vellfire, Toyota Fortuner VRZ, Mitsubishi Pajero Sport Dakar, hingga sedan mewah Toyota Camry dan Mercedes Benz.</p>
-                        <p>Layanan kami mencakup seluruh wilayah Banten dan Jakarta, termasuk <em>BSD City, Bintaro, Alam Sutera, Gading Serpong, Karawaci, dan Bandara Soekarno Hatta</em>. Cocok untuk kebutuhan <strong>wedding car Tangerang</strong> (mobil pengantin), penjemputan tamu VVIP, pejabat negara, hingga keperluan bisnis korporat (Corporate Car Rental).</p>
-                    </div>
-                </details>
-
-                <details class="group bg-panel rounded-lg border border-white/5 overflow-hidden">
-                    <summary class="p-6 font-bold text-gray-300 cursor-pointer hover:text-purple-400 transition flex justify-between">
-                        Harga Sewa Alphard & Fortuner Terbaru 2026
-                        <i class="fa-solid fa-chevron-down text-gray-600 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-500 text-sm leading-relaxed mt-2 border-t border-white/5">
-                        <p class="mb-3">Kami menawarkan <strong>harga sewa mobil mewah Tangerang</strong> yang sangat kompetitif dengan kualitas unit prima. Untuk sewa Alphard Transformer + Driver, harga mulai dari Rp 2.500.000 (12 Jam) dalam kota. Sedangkan untuk rental Fortuner VRZ dan Pajero Sport mulai dari Rp 1.500.000.</p>
-                        <p>Tersedia juga paket <em>All In (BBM + Tol + Parkir)</em> untuk kemudahan perjalanan Anda. Semua unit kami dirawat secara berkala di bengkel resmi, bersih, wangi, dan bebas asap rokok. Driver kami berpengalaman, ramah, dan menguasai rute jalan di Jabodetabek.</p>
-                    </div>
-                </details>
-                
-                <details class="group bg-panel rounded-lg border border-white/5 overflow-hidden">
-                    <summary class="p-6 font-bold text-gray-300 cursor-pointer hover:text-purple-400 transition flex justify-between">
-                        Syarat Rental Mobil Lepas Kunci (Corporate)
-                        <i class="fa-solid fa-chevron-down text-gray-600 group-open:rotate-180 transition"></i>
-                    </summary>
-                    <div class="p-6 pt-0 text-gray-500 text-sm leading-relaxed mt-2 border-t border-white/5">
-                        <p>Khusus untuk kebutuhan perusahaan (B2B), kami melayani <strong>rental mobil lepas kunci Tangerang</strong> dengan syarat mudah. Cukup lampirkan legalitas perusahaan (NIB, NPWP, Domisili) dan PO resmi. Kami siap menjadi partner transportasi jangka panjang untuk operasional direksi atau manajer perusahaan Anda.</p>
-                    </div>
-                </details>
+                <details class="group bg-panel rounded-lg border border-white/5 overflow-hidden"><summary class="p-6 font-bold text-gray-300 cursor-pointer hover:text-purple-400 transition flex justify-between">Pusat Rental Mobil Mewah Ciledug & Tangerang Terlengkap<i class="fa-solid fa-chevron-down text-gray-600 group-open:rotate-180 transition"></i></summary><div class="p-6 pt-0 text-gray-500 text-sm leading-relaxed mt-2 border-t border-white/5"><p>Mencari rental Alphard Ciledug atau sewa mobil mewah di Tangerang? Ciledug Rent Car Luxury adalah jawabannya.</p></div></details>
+                <details class="group bg-panel rounded-lg border border-white/5 overflow-hidden"><summary class="p-6 font-bold text-gray-300 cursor-pointer hover:text-purple-400 transition flex justify-between">Harga Sewa Alphard & Fortuner Terbaru 2026<i class="fa-solid fa-chevron-down text-gray-600 group-open:rotate-180 transition"></i></summary><div class="p-6 pt-0 text-gray-500 text-sm leading-relaxed mt-2 border-t border-white/5"><p>Harga sewa Alphard Transformer + Driver mulai dari Rp 2.500.000 (12 Jam).</p></div></details>
             </div>
         </div>
     </section>
@@ -442,66 +362,18 @@
                 <div class="space-y-4 text-gray-400 text-sm">
                     <p>Partner perjalanan kelas atas Anda. Melayani dengan hati, mengutamakan privasi dan kenyamanan VVIP.</p>
                     <div class="flex items-center gap-3"><i class="fa-brands fa-whatsapp text-green-500"></i> 0855-9163-6942</div>
-                    <div class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-purple-500 mt-1"></i> Ciledug, Tangerang, Banten, Indonesia.</div>
                 </div>
             </div>
-            
             <div class="h-[250px] bg-panel rounded-xl overflow-hidden border border-white/10 grayscale hover:grayscale-0 transition duration-500">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15864.716909516854!2d106.704859!3d-6.24009405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88ed343af45fc195%3A0x98e5b8eaad8e2564!2sCiledugPromo.biz.id%20%7C%20Layanan%20Bisnis%20%26%20Pemasaran!5e0!3m2!1sid!2sid!4v1768642599691!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
         </div>
-        <div class="text-center border-t border-white/5 pt-8">
-            <p class="text-gray-600 text-xs">© 2026 Ciledug Rent Car Luxury. All Rights Reserved.</p>
-        </div>
+        <div class="text-center border-t border-white/5 pt-8"><p class="text-gray-600 text-xs">© 2026 Ciledug Rent Car Luxury. All Rights Reserved.</p></div>
     </footer>
 
-    <a href="https://wa.me/6285591636942?text=Halo%20Admin,%20saya%20mau%20booking%20unit." 
-       class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl wa-float hover:scale-110 transition shadow-2xl">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/6285591636942?text=Halo%20Admin,%20saya%20mau%20booking%20unit." class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl wa-float hover:scale-110 transition shadow-2xl"><i class="fa-brands fa-whatsapp"></i></a>
 
     <script>
-        // GSAP Animations
         gsap.registerPlugin(ScrollTrigger);
-        
-        gsap.from("h1", { opacity: 0, y: 100, duration: 1.5, ease: "power4.out", delay: 0.2 });
-        
-        gsap.utils.toArray('.bento-card').forEach((card, i) => {
-            gsap.from(card, {
-                scrollTrigger: { trigger: card, start: "top 90%" },
-                opacity: 0, y: 50, duration: 0.8, delay: i * 0.1
-            });
-        });
-
-        // Alpine JS Calculator
-        function rentCalc() {
-            return {
-                car: 'alphard',
-                duration: 12,
-                prices: {
-                    alphard: { 12: 2500000, 24: 3500000 },
-                    fortuner: { 12: 1500000, 24: 2000000 },
-                    pajero: { 12: 1500000, 24: 2000000 },
-                    camry: { 12: 2000000, 24: 3000000 }
-                },
-                calculate() {
-                    return this.prices[this.car][this.duration];
-                },
-                formatRupiah(num) {
-                    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(num);
-                },
-                generateWa() {
-                    let price = this.formatRupiah(this.calculate());
-                    let text = `Halo Admin Ciledug Luxury, saya mau tanya ketersediaan unit:%0a` +
-                               `%0a- Unit: ${this.car.toUpperCase()}` +
-                               `%0a- Durasi: ${this.duration} Jam` +
-                               `%0a- Estimasi Web: ${price}` +
-                               `%0a%0aApakah unit tersedia untuk tanggal... ?`;
-                    return `https://wa.me/6285591636942?text=${text}`;
-                }
-            }
-        }
-    </script>
-</body>
-</html>
+        gsap.from("h1", { opacity: 0, y: 100, duration: 1.5, ease: "power4.out", delay: 0.
